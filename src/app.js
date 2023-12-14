@@ -9,19 +9,20 @@ function buttonClick(value) {
     }
 }
 
+//handle if the input is a number
 function numberHandle(number){
-    console.log(number + 'Number');
+    console.log(number + ' Number');
+
 }
 
+//handle if the input is an operation symbol
 function operHandle(oper){
     console.log(oper + 'Oper');
 }
 
 function init() {
     console.log("initialized")
-    document.getElementsByClassName('.num-button').addEventListener("click", function(event) { buttonClick(event.target.innerText); });
-    
-    document.getElementsByClassName('.op-button').addEventListener("click", function(event) { buttonClick(event.target.innerText); });
+    document.querySelector('.calc-buttons').addEventListener("click", function(event) { buttonClick(event.target.innerText); });
 }
 
 init();
