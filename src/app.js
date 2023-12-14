@@ -6,8 +6,6 @@ const screen = document.querySelector('.output');
 
 function buttonClick(value) {
 
-    console.log('got value from click');
-
     if(isNaN(value)){
      operHandle(value);   
     } else {
@@ -28,7 +26,6 @@ function numberHandle(number){
 
 //handle if the input is an operation symbol
 function operHandle(oper){
-    console.log(oper + 'Oper');
     switch(oper){
         case 'C':
             clearBuffer();
@@ -108,12 +105,10 @@ function flushOperation(intBuffer) {
 }
 
 function init() {
-    console.log("initialized")
     document.querySelector('.calc-buttons').addEventListener("click", function(event) { buttonClick(event.target.innerText); });
 }
 
 function render() {
-    console.log('screen value: ' + screen.innerText);
     screen.innerText = buffer;
 }
 
